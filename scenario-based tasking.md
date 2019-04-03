@@ -109,7 +109,9 @@ Feature：student-grade-command
 请输入学生信息（格式：姓名, 学号, 学科: 成绩, ...），按回车提交：
 ```
 
-​	Scenario：添加学生成绩
+------
+
+Scenario：添加学生成绩
 
 ​		Given：学生信息&&输入格式正确
 
@@ -120,6 +122,8 @@ Feature：student-grade-command
 ```
 学生xxx的成绩被添加
 ```
+
+​		
 
 ​		Given：学生信息&&输入格式不正确
 
