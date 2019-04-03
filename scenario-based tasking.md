@@ -52,7 +52,7 @@ Router#route-->ExitCommand#invoke
 end
 ```
 
-改进需求：
+##### 改进需求：
 
 1. 执行Storage#add前，调用getPoints计算加分项
 2. 在调用Storage的add和findAll方法时，进行数据持久化处理
