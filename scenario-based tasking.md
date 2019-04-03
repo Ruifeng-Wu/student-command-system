@@ -36,6 +36,7 @@ ScoreService#generateScoreSheet-->validate
 validate-->ScoreService#generateScoreSheet
 ScoreService#generateScoreSheet-->Storage#findAll
 Storage#findAll-->ScoreService#generateScoreSheet
+
 ScoreService#generateScoreSheet-->buildScoreSheetObject
 buildScoreSheetObject-->ScoreService#generateScoreSheet
 ScorePrintCommand#invoke-->ScoreSheetPrintCommand#buildScoreSheetString
@@ -49,4 +50,19 @@ main-->Router#route
 Router#route-->main
 Router#route-->ExitCommand#invoke
 end
+```
+
+改进需求：
+
+1. 执行Storage#add前，调用getPoints计算加分项
+2. 在调用Storage的add和findAll方法时，进行数据持久化处理
+
+```mermaid
+graph LR;
+Storage#add-->Storage#getPoints
+Storage#getPoints-->Storage#add
+Storage#add-->File
+File-->Storage#add
+Storage#findAll-->File
+File-->Storage#findAll
 ```
