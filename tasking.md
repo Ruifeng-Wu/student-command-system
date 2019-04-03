@@ -28,3 +28,5 @@ graph LR;
 
 
 
+[尝试采用框架的形式来解决这个问题](scenario-based tasking.md)
+
