@@ -71,7 +71,7 @@ File-->Storage#findAll
 
 Feature：student-grade-command
 
-​	Scenario：主界面
+​	Scenario：主界面（45‘）
 
 ​		Given：Router#route
 
@@ -87,7 +87,7 @@ Feature：student-grade-command
 
 ------
 
-​	Scenario：进入学生成绩界面
+​	Scenario：进入学生成绩界面（30‘）
 
 ​		Given：Router#route
 
@@ -97,7 +97,7 @@ Feature：student-grade-command
 
 ------
 
-​	Scenario：添加学生成绩界面
+​	Scenario：添加学生成绩界面（30‘）
 
 ​		Given：Router#route
 
@@ -111,7 +111,7 @@ Feature：student-grade-command
 
 ------
 
-Scenario：添加学生成绩
+Scenario：添加学生成绩（45‘）
 
 ​		Given：学生信息&&输入格式正确
 
@@ -133,7 +133,7 @@ Scenario：添加学生成绩
 
 ------
 
-​	Scenario：持久化学生数据
+​	Scenario：持久化学生数据（30‘）
 
 ​		Given：学生信息
 
@@ -143,7 +143,7 @@ Scenario：添加学生成绩
 
 ------
 
-​	Scenario：计算加分策略
+​	Scenario：计算加分策略（30‘）
 
 ​		Given：学生信息
 
@@ -169,7 +169,7 @@ Scenario：添加学生成绩
 
 ------
 
-​	Scenario：打印学生成绩界面
+​	Scenario：打印学生成绩界面（5‘）
 
 ​		Given：Router#route
 
@@ -179,7 +179,7 @@ Scenario：添加学生成绩
 
 ------
 
-​	Scenario：打印学生成绩界面
+​	Scenario：打印学生成绩界面（30‘）
 
 ​		Given：Router#route
 
@@ -211,7 +211,7 @@ Scenario：添加学生成绩
 
 ------
 
-​	Scenario：生成成绩单
+​	Scenario：生成成绩单（15‘）
 
 ​		Given：学号
 
@@ -221,7 +221,7 @@ Scenario：添加学生成绩
 
 ------
 
-​	Scenario：查找学生成绩
+​	Scenario：查找学生成绩（20‘）
 
 ​		Given：学号
 
@@ -239,7 +239,7 @@ Scenario：添加学生成绩
 
 ------
 
-​	Scenario：生成成绩单字符串
+​	Scenario：生成成绩单字符串（10‘）
 
 ​		Given：成绩单对象
 
