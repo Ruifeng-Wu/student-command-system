@@ -28,10 +28,10 @@ graph LR;
 subgraph 打印学生成绩
 main-->Router#route
 Router#route-->main
-Router#route-->ScorePrintCommand#invoke
-ScorePrintCommand#invoke-->Router#route
-ScorePrintCommand#invoke-->ScoreService#generateScoreSheet
-ScoreService#generateScoreSheet-->ScorePrintCommand#invoke
+Router#route-->ScoreSheetPrintCommand#invoke
+ScoreSheetPrintCommand#invoke-->Router#route
+ScoreSheetPrintCommand#invoke-->ScoreService#generateScoreSheet
+ScoreService#generateScoreSheet-->ScoreSheetPrintCommand#invoke
 ScoreService#generateScoreSheet-->validate
 validate-->ScoreService#generateScoreSheet
 ScoreService#generateScoreSheet-->Storage#findAll
@@ -39,8 +39,8 @@ Storage#findAll-->ScoreService#generateScoreSheet
 
 ScoreService#generateScoreSheet-->buildScoreSheetObject
 buildScoreSheetObject-->ScoreService#generateScoreSheet
-ScorePrintCommand#invoke-->ScoreSheetPrintCommand#buildScoreSheetString
-ScoreSheetPrintCommand#buildScoreSheetString-->ScorePrintCommand#invoke
+ScoreSheetPrintCommand#invoke-->buildScoreSheetString
+buildScoreSheetString-->ScoreSheetPrintCommand#invoke
 end
 ```
 ```mermaid
@@ -87,7 +87,7 @@ Feature：student-grade-command
 
 ------
 
-​	Scenario：进入学生成绩界面（30‘）
+​	Scenario：进入学生成绩界面（15‘）
 
 ​		Given：Router#route
 
@@ -97,7 +97,7 @@ Feature：student-grade-command
 
 ------
 
-​	Scenario：添加学生成绩界面（30‘）
+​	Scenario：添加学生成绩界面（15‘）
 
 ​		Given：Router#route
 
@@ -111,7 +111,7 @@ Feature：student-grade-command
 
 ------
 
-Scenario：添加学生成绩（45‘）
+Scenario：添加学生成绩（30‘）
 
 ​		Given：学生信息&&输入格式正确
 
@@ -133,7 +133,7 @@ Scenario：添加学生成绩（45‘）
 
 ------
 
-​	Scenario：持久化学生数据（30‘）
+​	Scenario：持久化学生数据（20‘）
 
 ​		Given：学生信息
 
@@ -143,7 +143,7 @@ Scenario：添加学生成绩（45‘）
 
 ------
 
-​	Scenario：计算加分策略（30‘）
+​	Scenario：计算加分策略（25‘）
 
 ​		Given：学生信息
 
@@ -231,9 +231,9 @@ Scenario：添加学生成绩（45‘）
 
 
 
-​		Given：学号不存在
+​		Given：学号
 
-​		When：Storage#findAll学号存在
+​		When：Storage#findAll学号不存在
 
 ​		Then：返回添加学生成绩界面Router#route(2)
 
