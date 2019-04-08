@@ -1,5 +1,6 @@
 .git
 .gradle
+.idea
 .DS_Store
 tdd-java-base.*
 build
