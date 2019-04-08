@@ -13,6 +13,15 @@ public class ScoreSheet {
     private List<Student> studentList;
     private double totalAverage;
     private double totalMedian;
+    private String[] selectIds;
+
+    public String[] getSelectIds() {
+        return selectIds;
+    }
+
+    public void setSelectIds(String[] selectIds) {
+        this.selectIds = selectIds;
+    }
 
     public ScoreSheet() {
         studentList = new ArrayList<>();

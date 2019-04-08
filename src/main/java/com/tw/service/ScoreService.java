@@ -45,12 +45,15 @@ public class ScoreService {
         return false;
     }
 
-    public ScoreSheet generateScoreSheet(String input) {
-        if (FormatTools.validate(input, Constants.STUDENT_ID_PATTERN)) {
-            return buildScoreSheetObject(Storage.findAll());
+    public ScoreSheet generateScoreSheet() {
+        String input=IOTools.getMessage();
+        while (!FormatTools.validate(input, Constants.STUDENT_ID_PATTERN)) {
+            IOTools.display(Constants.GRADE_LIST_FORMAT_ERROR);
+            input=IOTools.getMessage();
         }
-        IOTools.display(Constants.GRADE_LIST_FORMAT_ERROR);
-        return generateScoreSheet(IOTools.getMessage());
+        scoreSheet=buildScoreSheetObject(Storage.findAll());
+        scoreSheet.setSelectIds(input.split(", "));
+        return scoreSheet;
     }
 
     public ScoreSheet buildScoreSheetObject(List<String> students) {
