@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/8 19:10
+ * @date 2019/4/7 19:10
  */
 public class ScoreSheet {
     private List<Student> studentList;
@@ -26,10 +26,10 @@ public class ScoreSheet {
     public void summary() {
         double[] totalScores = studentList.stream().mapToDouble(Student::getTotal).toArray();
         double amount = Arrays.stream(totalScores).sum();
-        totalAverage=amount/totalScores.length;
+        totalAverage = amount / totalScores.length;
         Arrays.sort(totalScores);
-        int index=totalScores.length/2>0?totalScores.length/2:0;
-        totalMedian=(totalScores.length%2==0)?(totalScores[index]+totalScores[index-1])/2:totalScores[index];
+        int index = totalScores.length / 2 > 0 ? totalScores.length / 2 : 0;
+        totalMedian = (totalScores.length % 2 == 0) ? (totalScores[index] + totalScores[index - 1]) / 2 : totalScores[index];
     }
 
 

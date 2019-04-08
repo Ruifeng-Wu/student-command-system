@@ -13,7 +13,7 @@ import static org.junit.Assert.assertThat;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/7 11:47
+ * @date 2019/4/7 10:47
  */
 public class RouterTest {
     private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
@@ -31,7 +31,7 @@ public class RouterTest {
                 "2. 生成成绩单\n" +
                 "3. 退出请输入你的选择（1～3）：";
         String actual = router.route(0);
-        assertThat(actual,equalTo(expected));
+        assertThat(actual, equalTo(expected));
     }
 
 }

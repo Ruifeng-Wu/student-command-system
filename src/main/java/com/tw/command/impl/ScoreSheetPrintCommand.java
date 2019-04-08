@@ -10,7 +10,7 @@ import com.tw.util.IOTools;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/8 15:54
+ * @date 2019/4/7 15:54
  */
 public class ScoreSheetPrintCommand implements Command {
 

@@ -9,7 +9,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/7 19:01
+ * @date 2019/4/6 19:01
  */
 public class FormatToolsTest {
 
@@ -36,6 +36,7 @@ public class FormatToolsTest {
         String input = "2019040500x2, 20190405002";
         assertFalse("should return 'false'", FormatTools.validate(input, Constants.STUDENT_ID_PATTERN));
     }
+
     @Test
     public void should_return_student_object() {
         String str = "tom, 20190405001, 回, 数学: 98.0, 语文: 90.0, 英语: 85.0, 编程: 100.0, 平均分: 93.25, 总分: 383.0";

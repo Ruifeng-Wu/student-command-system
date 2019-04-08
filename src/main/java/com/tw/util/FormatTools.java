@@ -8,10 +8,9 @@ import java.util.regex.Pattern;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/8 19:20
+ * @date 2019/4/7 19:20
  */
 public class FormatTools {
-
 
 
     public static boolean validate(String input, String patternStr) {

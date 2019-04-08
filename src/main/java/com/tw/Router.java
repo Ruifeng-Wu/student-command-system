@@ -23,7 +23,7 @@ public class Router {
         pathMap.put(0, new HomeCommand());
         pathMap.put(1, new AddStudentInfoCommand());
         pathMap.put(2, new ScoreSheetPrintCommand());
-        pathMap.put(3,new ExitCommand());
+        pathMap.put(3, new ExitCommand());
     }
 
     public String route(Integer i) {

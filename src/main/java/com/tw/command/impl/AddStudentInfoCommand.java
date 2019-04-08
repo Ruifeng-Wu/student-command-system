@@ -8,7 +8,7 @@ import com.tw.util.IOTools;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/8 15:52
+ * @date 2019/4/7 15:52
  */
 public class AddStudentInfoCommand implements Command {
     @Override

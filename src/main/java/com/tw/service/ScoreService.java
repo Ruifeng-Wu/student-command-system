@@ -2,17 +2,17 @@ package com.tw.service;
 
 import com.tw.Pojo.ScoreSheet;
 import com.tw.Pojo.Student;
-import com.tw.util.Storage;
 import com.tw.util.Constants;
-import com.tw.util.IOTools;
 import com.tw.util.FormatTools;
+import com.tw.util.IOTools;
+import com.tw.util.Storage;
 
 import java.util.List;
 
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/8 15:16
+ * @date 2019/4/7 15:16
  */
 public class ScoreService {
     private Student student;
@@ -36,13 +36,15 @@ public class ScoreService {
         }
         return false;
     }
+
     public boolean getPoints(Student stu) {
         if (!stu.getNation().equals("汉")) {
-            stu.setTotal(stu.getTotal()+10);
+            stu.setTotal(stu.getTotal() + 10);
             return true;
         }
         return false;
     }
+
     public ScoreSheet generateScoreSheet(String input) {
         if (FormatTools.validate(input, Constants.STUDENT_ID_PATTERN)) {
             return buildScoreSheetObject(Storage.findAll());

@@ -10,10 +10,11 @@ import java.io.PrintStream;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/7 23:03
+ * @date 2019/4/6 23:03
  */
 public class IOToolsTest {
     private ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
     @Before
 
     public void setup() {

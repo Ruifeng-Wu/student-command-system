@@ -19,7 +19,7 @@ public class StorageTest {
 
     @Before
     public void init() {
-        student=new Student();
+        student = new Student();
         student.setName("tom");
         student.setId("20190405001");
         student.setNation("回");
@@ -32,13 +32,14 @@ public class StorageTest {
 
 
     @Test
-    public void findAll(){
+    public void findAll() {
         Storage.add(student);
-        List<String> stuStr=Storage.findAll();
-        assertEquals("tom, 20190405001, 回, 数学: 98.0, 语文: 90.0, 英语: 85.0, 编程: 100.0, 平均分: 93.25, 总分: 373.0",stuStr.get(stuStr.size()-1).toString());
+        List<String> stuStr = Storage.findAll();
+        assertEquals("tom, 20190405001, 回, 数学: 98.0, 语文: 90.0, 英语: 85.0, 编程: 100.0, 平均分: 93.25, 总分: 373.0", stuStr.get(stuStr.size() - 1).toString());
     }
+
     @Test
-    public void add(){
-        assertTrue("should return true",Storage.add(student));
+    public void add() {
+        assertTrue("should return true", Storage.add(student));
     }
 }

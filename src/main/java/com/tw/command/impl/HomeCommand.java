@@ -6,11 +6,11 @@ import com.tw.util.Constants;
 /**
  * @author Ruifeng-Wu
  * @Email 296078293@qq.com
- * @date 2019/4/8 11:50
+ * @date 2019/4/7 11:50
  */
-public class HomeCommand implements Command{
+public class HomeCommand implements Command {
     @Override
     public String invoke() {
-       return Constants.MAIN_MENU;
+        return Constants.MAIN_MENU;
     }
 }
