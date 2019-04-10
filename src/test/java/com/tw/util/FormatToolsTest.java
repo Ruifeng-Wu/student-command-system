@@ -3,8 +3,8 @@ package com.tw.util;
 import com.tw.Pojo.Student;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.Assert.*;
 
 /**
  * @author Ruifeng-Wu
@@ -42,5 +42,15 @@ public class FormatToolsTest {
         String str = "tom, 20190405001, 回, 数学: 98.0, 语文: 90.0, 英语: 85.0, 编程: 100.0, 平均分: 93.25, 总分: 383.0";
         Object obj = FormatTools.convertToObj(str);
         assertTrue("should return true", Student.class.isInstance(obj));
+        Student student = new Student();
+        student.setName("tom");
+        student.setId("20190405001");
+        student.setNation("回");
+        student.setMath(98);
+        student.setChinese(90);
+        student.setEnglish(85);
+        student.setProgramming(100);
+        student.summary();
+        assertThat(obj.toString(), containsString(student.toString()));
     }
 }
