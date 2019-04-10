@@ -64,7 +64,7 @@ public class ScoreServiceTest {
         scoreSheetExcepted.summary();
         service.addStudentInfo(stu);
         String input = "20200405001, 20190905001";
-        scoreSheet = service.generateScoreSheet(input);
+        scoreSheet = service.generateScoreSheet();
         assertThat(scoreSheet.toString(), equalTo(scoreSheetExcepted.toString()));
     }
 
