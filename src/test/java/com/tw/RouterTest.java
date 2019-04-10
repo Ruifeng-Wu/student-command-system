@@ -2,12 +2,14 @@ package com.tw;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
 
 
 /**
@@ -34,4 +36,11 @@ public class RouterTest {
         assertThat(actual, equalTo(expected));
     }
 
+    @Test
+    public void exit_command() {
+        Router router = mock(Router.class);
+        Mockito.doCallRealMethod().when(router).route(1);
+        //ExitCommand exitCommand = mock(ExitCommand.class);
+        //verify(exitCommand).invoke();
+    }
 }

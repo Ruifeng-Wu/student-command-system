@@ -16,11 +16,9 @@ public class ScoreSheetPrintCommand implements Command {
 
     @Override
     public String invoke() {
-
         ScoreService service = new ScoreService();
         ScoreSheet scoreSheet;
         IOTools.display(Constants.GRADE_LIST_MESSAGE);
-
         scoreSheet = service.generateScoreSheet();
         return buildScoreSheetString(scoreSheet);
     }
